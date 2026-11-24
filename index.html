@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>THE FIVE CLUB — Indoor 5-a-side football, Prague</title>
+<meta name="description" content="Four indoor 5-a-side pitches, a bar & lounge and a year-round home for small-sided football in Prague.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#121514;--bg2:#1d221f;--fg:#f5f6f1;--mute:#b1b9b1;--lime:#89be2a;--line:#2a312d;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:72px;background:var(--bg)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1rem/1.6 Poppins,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+.kick{color:var(--lime);font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:0 0 .9rem}
+h1,h2,h3{font-weight:800;line-height:1.05;letter-spacing:-.02em;margin:0}
+h2{font-size:clamp(2rem,5vw,3.25rem);margin-bottom:1rem}
+.lead{color:var(--mute);max-width:56ch;font-size:1.1rem}
+section{padding:clamp(3.5rem,9vw,6.5rem) 0}
+.btn{display:inline-block;background:var(--lime);color:#121514;font-weight:700;padding:.9rem 1.6rem;border-radius:4px;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px);background:#9bd234}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--mute)}
+.btn.ghost:hover{border-color:var(--lime);color:var(--lime);background:transparent}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(18,21,20,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:rgba(18,21,20,.88);z-index:21}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;letter-spacing:.04em;border-left:4px solid var(--lime);padding-left:.7rem;line-height:1.05;font-size:.95rem}
+.nav ul{display:flex;gap:1.8rem;list-style:none;margin:0;padding:0;font-size:.9rem;font-weight:500;color:var(--mute)}
+.nav ul a:hover{color:var(--lime)}
+.nav .btn{padding:.55rem 1.1rem;font-size:.85rem}
+.rt{display:flex;align-items:center;gap:.7rem}
+.lang{display:flex;align-items:center;gap:.4rem;background:transparent;color:var(--fg);border:1px solid var(--line);border-radius:4px;padding:.4rem .65rem;font:600 .8rem Poppins,system-ui,sans-serif;cursor:pointer;transition:border-color .15s}
+.lang:hover{border-color:var(--lime)}
+.lang .fl{font-size:1.15rem;line-height:1}
+.hero{position:relative;min-height:min(86vh,760px);display:flex;align-items:flex-end;padding:0;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,21,20,.92) 0%,rgba(18,21,20,.55) 55%,rgba(18,21,20,.15) 100%),linear-gradient(0deg,var(--bg) 0%,transparent 35%)}
+.hero .wrap{position:relative;z-index:2;padding:6rem 0 4.5rem}
+.hero h1{font-size:clamp(3rem,10vw,7rem);border-left:8px solid var(--lime);padding-left:1.2rem;margin-bottom:1.5rem}
+.hero p.lead{color:var(--fg);font-size:clamp(1.1rem,2.4vw,1.5rem);font-weight:500;margin:0 0 2rem}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap}
+.stats{background:var(--bg2);border-block:1px solid var(--line);padding:0}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:2rem 1rem;border-left:1px solid var(--line)}
+.stat:first-child{border-left:0;padding-left:0}
+.stat b{display:block;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;color:var(--lime);line-height:1}
+.stat span{color:var(--mute);font-size:.85rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.split img{border-radius:6px;width:100%;aspect-ratio:4/3;object-fit:cover}
+.pts{list-style:none;padding:0;margin:2rem 0 0;display:grid;gap:1.1rem}
+.pts li{border-left:3px solid var(--lime);padding-left:1rem;color:var(--mute)}
+.pts b{color:var(--fg)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2.5rem}
+.card{position:relative;overflow:hidden;border-radius:6px;aspect-ratio:16/9;background:var(--bg2)}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover img{transform:scale(1.04)}
+.card span{position:absolute;left:1rem;bottom:.9rem;font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);text-shadow:0 1px 8px #000}
+.card::after{content:"";position:absolute;inset:auto 0 0;height:45%;background:linear-gradient(0deg,rgba(0,0,0,.75),transparent);z-index:0}
+.card span{z-index:1}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem}
+.step{background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:1.8rem}
+.step i{font-style:normal;color:var(--lime);font-weight:800;font-size:.85rem;letter-spacing:.14em}
+.step h3{font-size:1.4rem;margin:.6rem 0 .5rem}
+.step p{margin:0;color:var(--mute)}
+.contact{background:var(--bg2);border-top:1px solid var(--line)}
+form{display:grid;gap:.9rem}
+input,textarea{width:100%;font:inherit;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.85rem 1rem}
+input:focus,textarea:focus{outline:2px solid var(--lime);outline-offset:1px;border-color:transparent}
+textarea{min-height:120px;resize:vertical}
+form .btn{border:0;cursor:pointer;font:inherit;font-weight:700;justify-self:start}
+.note{font-size:.85rem;color:var(--mute);margin:0}
+footer{padding:2rem 0;border-top:1px solid var(--line);color:var(--mute);font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media(max-width:820px){.nav ul{display:none}.split,.grid,.steps{grid-template-columns:1fr}.stats .wrap{grid-template-columns:1fr 1fr}.stat:nth-child(3){border-left:0;padding-left:0}.stat{border-top:1px solid var(--line)}.stat:nth-child(-n+2){border-top:0}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo">THE FIVE<br>CLUB</a>
+    <ul><li><a href="#concept">Concept</a></li><li><a href="#spaces">The venue</a></li><li><a href="#how">How it works</a></li><li><a href="#contact">Contact</a></li></ul>
+    <div class="rt"><a href="#contact" class="btn">Book a pitch</a><button class="lang" id="lang" type="button" aria-label="Přepnout do češtiny"><span class="fl">🇬🇧</span><span id="lc">EN</span></button></div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <img src="img/pitch.jpg" alt="Indoor 5-a-side pitch at The Five Club">
+    <div class="wrap">
+      <p class="kick">Indoor 5-a-side football · Prague</p>
+      <h1>THE FIVE<br>CLUB</h1>
+      <p class="lead">A new urban football &amp; social destination for Prague.</p>
+      <div class="cta"><a href="#contact" class="btn">Book a pitch</a><a href="#spaces" class="btn ghost">Discover the venue</a></div>
+    </div>
+  </section>
+
+  <div class="stats"><div class="wrap">
+    <div class="stat"><b>4</b><span>indoor pitches</span></div>
+    <div class="stat"><b>5v5</b><span>enclosed, all-weather</span></div>
+    <div class="stat"><b>365</b><span>days of football a year</span></div>
+    <div class="stat"><b>Bar</b><span>&amp; lounge overlooking the games</span></div>
+  </div></div>
+
+  <section id="concept"><div class="wrap split">
+    <div class="reveal">
+      <p class="kick">01 / The concept</p>
+      <h2>Football first.<br>Community always.</h2>
+      <p class="lead">A reliable, year-round home for small-sided football in Prague. A place where teams can play, meet and come back regularly.</p>
+      <ul class="pts">
+        <li><b>Indoor by design.</b> Consistent playing conditions all year, winter included.</li>
+        <li><b>Easy to use.</b> Online booking, organised time slots, a simple customer journey.</li>
+        <li><b>More than a pitch.</b> A bar and lounge to stay before and after the game.</li>
+      </ul>
+    </div>
+    <img class="reveal" src="img/bar.jpg" alt="Bar and lounge overlooking the pitches" loading="lazy">
+  </div></section>
+
+  <section id="spaces" style="background:var(--bg2);border-block:1px solid var(--line)"><div class="wrap">
+    <div class="reveal">
+      <p class="kick">02 / The venue</p>
+      <h2>One venue.<br>Three complementary spaces.</h2>
+      <p class="lead">Pitches, a social lounge and proper player facilities, all under one roof.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal"><img src="img/pitch.jpg" alt="Pitches" loading="lazy"><span>Pitches</span></div>
+      <div class="card reveal"><img src="img/bar.jpg" alt="Bar and lounge" loading="lazy"><span>Bar &amp; lounge</span></div>
+      <div class="card reveal"><img src="img/changing.jpg" alt="Changing rooms" loading="lazy"><span>Changing rooms</span></div>
+      <div class="card reveal"><img src="img/arrival.jpg" alt="Arrival and player flow" loading="lazy"><span>Arrival &amp; player flow</span></div>
+    </div>
+  </div></section>
+
+  <section id="how"><div class="wrap">
+    <div class="reveal"><p class="kick">03 / How it works</p><h2>Book. Play. Stay.</h2></div>
+    <div class="steps">
+      <div class="step reveal"><i>01</i><h3>Book</h3><p>Pick a time slot for your team. Structured bookings, no chasing around for a pitch.</p></div>
+      <div class="step reveal"><i>02</i><h3>Play</h3><p>Enclosed pitches, lockers, showers. Everything you need to just show up and play.</p></div>
+      <div class="step reveal"><i>03</i><h3>Stay</h3><p>Grab a drink in the lounge, watch the next match, talk about the one you just played.</p></div>
+    </div>
+  </div></section>
+
+  <section id="contact" class="contact"><div class="wrap split">
+    <div class="reveal">
+      <p class="kick">04 / Contact</p>
+      <h2>Opening soon.</h2>
+      <p class="lead">Want to be among the first to play? Leave us your details and we’ll let you know as soon as bookings open.</p>
+    </div>
+    <form class="reveal" onsubmit="event.preventDefault();thanks(this)">
+      <input type="text" data-ph="Name|Jméno" placeholder="Name" aria-label="Name" required>
+      <input type="email" data-ph="Email|E-mail" placeholder="Email" aria-label="Email" required>
+      <textarea data-ph="Your team, your message…|Váš tým, vaše zpráva…" placeholder="Your team, your message…" aria-label="Message"></textarea>
+      <button class="btn" type="submit">Keep me posted</button>
+      <p class="note">Demo form: it will be connected to a real inbox before launch.</p>
+    </form>
+  </div></section>
+</main>
+
+<footer><div class="wrap"><span>THE FIVE CLUB / PRAGUE</span><span>© 2026 The Five Club. All rights reserved.</span></div></footer>
+
+<script>
+try{
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}catch(e){document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'))}
+const T=[["Concept", "Koncept"], ["The venue", "Prostory"], ["How it works", "Jak to funguje"], ["Contact", "Kontakt"], ["Book a pitch", "Rezervovat hřiště"], ["Indoor 5-a-side football · Prague", "Vnitřní fotbal 5 na 5 · Praha"], ["A new urban football &amp; social destination for Prague.", "Nová městská fotbalová a společenská destinace pro Prahu."], ["Discover the venue", "Objevit prostory"], ["indoor pitches", "krytá hřiště"], ["enclosed, all-weather", "uzavřená, za každého počasí"], ["days of football a year", "dní fotbalu v roce"], ["&amp; lounge overlooking the games", "a lounge s výhledem na zápasy"], ["01 / The concept", "01 / Koncept"], ["Football first.<br>Community always.", "Nejdřív fotbal.<br>Komunita vždycky."], ["A reliable, year-round home for small-sided football in Prague. A place where teams can play, meet and come back regularly.", "Spolehlivý domov malého fotbalu v Praze po celý rok. Místo, kde týmy hrají, potkávají se a rády se vracejí."], ["<b>Indoor by design.</b> Consistent playing conditions all year, winter included.", "<b>Vnitřní z principu.</b> Stálé podmínky ke hře po celý rok, i v zimě."], ["<b>Easy to use.</b> Online booking, organised time slots, a simple customer journey.", "<b>Snadné používání.</b> Online rezervace, přehledné časové sloty, jednoduchý postup pro zákazníka."], ["<b>More than a pitch.</b> A bar and lounge to stay before and after the game.", "<b>Víc než hřiště.</b> Bar a lounge, kde můžete zůstat před zápasem i po něm."], ["02 / The venue", "02 / Prostory"], ["One venue.<br>Three complementary spaces.", "Jedno místo.<br>Tři doplňující se prostory."], ["Pitches, a social lounge and proper player facilities, all under one roof.", "Hřiště, společenský lounge a pořádné zázemí pro hráče, vše pod jednou střechou."], ["Pitches", "Hřiště"], ["Bar &amp; lounge", "Bar a lounge"], ["Changing rooms", "Šatny"], ["Arrival &amp; player flow", "Příchod a pohyb hráčů"], ["03 / How it works", "03 / Jak to funguje"], ["Book. Play. Stay.", "Rezervuj. Hraj. Zůstaň."], ["Book", "Rezervuj"], ["Play", "Hraj"], ["Stay", "Zůstaň"], ["Pick a time slot for your team. Structured bookings, no chasing around for a pitch.", "Vyberte si čas pro svůj tým. Přehledné rezervace, žádné shánění hřiště."], ["Enclosed pitches, lockers, showers. Everything you need to just show up and play.", "Uzavřená hřiště, skříňky, sprchy. Vše, co potřebujete, abyste přišli a hráli."], ["Grab a drink in the lounge, watch the next match, talk about the one you just played.", "Dejte si drink v loungi, sledujte další zápas a probírejte ten, který jste právě odehráli."], ["04 / Contact", "04 / Kontakt"], ["Opening soon.", "Brzy otevíráme."], ["Want to be among the first to play? Leave us your details and we’ll let you know as soon as bookings open.", "Chcete hrát mezi prvními? Nechte nám kontakt a dáme vám vědět, jakmile se spustí rezervace."], ["Keep me posted", "Dejte mi vědět"], ["Demo form: it will be connected to a real inbox before launch.", "Ukázkový formulář: před spuštěním bude napojen na skutečnou e-mailovou schránku."], ["THE FIVE CLUB / PRAGUE", "THE FIVE CLUB / PRAHA"], ["© 2026 The Five Club. All rights reserved.", "© 2026 The Five Club. Všechna práva vyhrazena."]];
+const M=new Map(T),els=[...document.querySelectorAll('body *')].filter(e=>e.tagName!=='SCRIPT'&&[...e.children].every(c=>c.tagName==='BR'||c.tagName==='B')&&M.has(e.innerHTML.trim()));
+els.forEach(e=>e._en=e.innerHTML.trim());
+const EN_TITLE=document.title,CS_TITLE='THE FIVE CLUB — Vnitřní fotbal 5 na 5, Praha';
+let lang='en';
+function setLang(l){
+  lang=l;const cs=l==='cs';
+  els.forEach(e=>{e.innerHTML=cs?M.get(e._en):e._en});
+  document.querySelectorAll('[data-ph]').forEach(e=>{const p=e.dataset.ph.split('|');e.placeholder=cs?p[1]:p[0];e.setAttribute('aria-label',e.placeholder)});
+  document.documentElement.lang=l;document.title=cs?CS_TITLE:EN_TITLE;
+  const b=document.getElementById('lang');
+  b.querySelector('.fl').textContent=cs?'🇨🇿':'🇬🇧';document.getElementById('lc').textContent=cs?'CZ':'EN';
+  b.setAttribute('aria-label',cs?'Switch to English':'Přepnout do češtiny');
+  try{localStorage.setItem('lang',l)}catch(e){}
+}
+function thanks(f){f.querySelector('button').textContent=lang==='cs'?'Děkujeme, ozveme se!':'Thanks, we’ll be in touch!'}
+document.getElementById('lang').addEventListener('click',()=>setLang(lang==='en'?'cs':'en'));
+let saved=null;try{saved=localStorage.getItem('lang')}catch(e){}
+const start=saved||((navigator.language||'').toLowerCase().startsWith('cs')?'cs':'en');
+if(start==='cs')setLang('cs');
+</script>
+</body>
+</html>
